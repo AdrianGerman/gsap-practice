@@ -6,7 +6,18 @@ body {
 .box {
   width: 100px;
   height: 100px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   background: #09f;
-  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  div {
+    width: 120px;
+    height: 120px;
+    background: #09f;
+  }
 }

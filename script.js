@@ -1,11 +1,12 @@
-gsap.to(".box", {
-  x: 100,
-  duration: 1,
-  rotate: 360,
-  scale: 0.5,
+gsap.to(".grid div", {
+  duration: 2,
+  scale: 0.9,
+  opacity: 0,
   stagger: {
-    each: 0.2,
+    each: 0.5,
     repeat: -1,
-    yoyo: true
+    yoyo: true,
+    grid: "auto",
+    from: "center"
   }
 })
