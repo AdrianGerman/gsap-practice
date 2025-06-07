@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Practice animation library</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background: #222;
+        font-family: system-ui;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        /* border-radius: 12px; */
+        background: #09f;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        div {
+          width: 120px;
+          height: 120px;
+          background: #09f;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> -->
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <script>
+      gsap.to(".grid div", {
+        duration: 2,
+        scale: 0.9,
+        opacity: 0,
+        stagger: {
+          each: 0.5,
+          repeat: -1,
+          yoyo: true,
+          grid: "auto",
+          from: "center"
+        }
+      })
+    </script>
+  </body>
+</html>
