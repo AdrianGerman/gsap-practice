@@ -44,6 +44,8 @@
       <button id="restart">Reiniciar</button>
     </footer>
 
+    <small id="log"></small>
+
     <script>
       const tl = gsap.timeline({
         defaults: {
@@ -64,6 +66,31 @@
           x: 100,
           rotation: 360
         })
+
+      window.play.onclick = () => {
+        tl.play()
+        window.log.innerHTML += "Play <br>"
+      }
+
+      window.pause.onclick = () => {
+        tl.pause()
+        window.log.innerHTML += "Pause <br>"
+      }
+
+      window.resume.onclick = () => {
+        tl.resume()
+        window.log.innerHTML += "Resume <br>"
+      }
+
+      window.reverse.onclick = () => {
+        tl.reverse()
+        window.log.innerHTML += "Reverse <br>"
+      }
+
+      window.restart.onclick = () => {
+        tl.restart()
+        window.log.innerHTML += "Restart <br>"
+      }
     </script>
   </body>
 </html>
