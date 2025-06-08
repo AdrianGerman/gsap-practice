@@ -33,14 +33,12 @@
     <script>
       gsap.registerPlugin(ScrollTrigger)
 
-      const split = new SplitText(".text", { type: "words" })
-
-      gsap.from(split.words, {
-        duration: 1,
-        y: 10,
-        stagger: 0.1,
+      gsap.to(".title", {
+        scale: 1.5,
         autoAlpha: 0,
-        filter: "blur(10px)"
+        scrollTrigger: {
+          scrub: 0.5
+        }
       })
     </script>
   </body>
