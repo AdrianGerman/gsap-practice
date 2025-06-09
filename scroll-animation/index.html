@@ -29,6 +29,7 @@
   </head>
   <body>
     <h1 class="title">AirPods Pro</h1>
+    <canvas id="hero"></canvas>
 
     <script>
       gsap.registerPlugin(ScrollTrigger)
@@ -40,6 +41,16 @@
           scrub: 0.5
         }
       })
+
+      const canvas = document.getElementById("hero")
+      const ctx = canvas.getContext("2d")
+
+      const TOTAL_FRAMES = 65
+
+      const createURL = (frame) => {
+        const id = frame.toString().padStart(4, "0")
+        return `https://www.apple.com/105/media/us/airpods-pro/2022/d2deeb8e-83eb-48ea-9721-f567cf0fffa8/anim/hero/medium/${id}.png`
+      }
     </script>
   </body>
 </html>
